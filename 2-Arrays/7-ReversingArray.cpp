@@ -1,6 +1,14 @@
 #include <bits/stdc++.h>
 using namespace std;
 
+void swap(int &a, int &b)
+{
+    int temp;
+    temp = a;
+    a = b;
+    b = temp;
+}
+
 void Reverse(int a[], int length)
 {
     int b[length];
@@ -15,11 +23,20 @@ void Reverse(int a[], int length)
     }
 }
 
+void Reverse2(int a[], int length)
+{
+    int temp;
+    for (int i = 0; i < length / 2; i++)
+    {
+        swap(a[i], a[length - 1 - i]);
+    }
+}
+
 int main()
 {
     int A[] = {2, 4, 6, 8, 9};
     int length = (sizeof(A) / sizeof(A[0]));
-    Reverse(A, length);
+    Reverse2(A, length);
     for (int i = 0; i < length; i++)
     {
         cout << A[i] << ' ';
