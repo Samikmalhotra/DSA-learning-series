@@ -10,7 +10,7 @@ void swap(int &a, int &b){
 void Selection(int A[],int n){
     int i,j,k;
     for(int i=0;i<n-1;i++){
-       102018031_ExpNo8_Samik_Malhotra         k=j;
+               k=j;
             }
         }
         swap(A[i],A[k]);
