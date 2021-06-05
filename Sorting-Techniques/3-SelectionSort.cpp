@@ -9,13 +9,15 @@ void swap(int &a, int &b){
 
 void Selection(int A[],int n){
     int i,j,k;
-    for(int i=0;i<n-1;i++){
+    for(i=0;i<n-1;i++){
+        for(j=k=i;j<n;j++){
+            if(A[j]<A[k])
                k=j;
             }
+            swap(A[i],A[k]);
         }
-        swap(A[i],A[k]);
     }
-}
+
 
 int main() {
     int A[]={11,13,7,2,16,9,24,5,10};
